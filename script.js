@@ -9,11 +9,9 @@ const scoreHolder = document.getElementById('score');
 target.addEventListener('click', () => {
 
     target.classList.add('hide');
-
     let score = JSON.parse(sessionStorage.getItem('score'));
     score += 1;
     sessionStorage.setItem('score', score);
-
     scoreHolder.textContent = "Score: " + score;
 
 
@@ -30,6 +28,11 @@ target.addEventListener('click', () => {
     target.style.left = val2 + "%"
 
 });
+window.addEventListener('unload', () => {
+    let score = JSON.parse(sessionStorage.getItem('score'));
+        sessionStorage.setItem('score', 0);
+        scoreHolder.textContent = "Score: " + score;
+})
 
 
 window.addEventListener('DOMContentLoaded', () => {
