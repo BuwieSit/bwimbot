@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+
 body {
     margin: 0;
     padding: 0;
@@ -15,15 +18,27 @@ body {
     border: 2px solid black;
     box-shadow: 0 0 10px white;
     position: relative;
+    z-index: 5;
 }
-#score {
+#time {
+    font-size: 1000px;
+    font-family: "Righteous", sans-serif;
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: white;
+}
+#score{
+    text-align: left;
     top: 0;
-    left: 1%;
+    left: 0;
     line-height: 0;
     color: white;
     pointer-events: none;
 }
+
 .target {
     background-color: rgb(255, 255, 240);
     width: 30px;

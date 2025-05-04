@@ -3,6 +3,7 @@
 let date = new Date();
 let time = date.getTime();
 console.log(time)
+const timeHolder = document.getElementById('time')
 const target = document.querySelector('.target');
 const scoreHolder = document.getElementById('score');
 
@@ -13,7 +14,6 @@ target.addEventListener('click', () => {
     score += 1;
     sessionStorage.setItem('score', score);
     scoreHolder.textContent = "Score: " + score;
-
 
     setTimeout(function() 
     {
@@ -28,6 +28,12 @@ target.addEventListener('click', () => {
     target.style.left = val2 + "%"
 
 });
+
+function countdown() {
+    
+}
+
+
 window.addEventListener('unload', () => {
     let score = JSON.parse(sessionStorage.getItem('score'));
         sessionStorage.setItem('score', 0);
