@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Limelight&display=swap');
 
 body {
     margin: 0;
@@ -11,6 +11,19 @@ body {
     align-items: center;
     justify-content: center;
 }
+.flash {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    opacity: 1;
+    pointer-events: none;
+    z-index: 50;
+    transition: all 0.4s ease;
+}
 .game-container {
     width: 80%;
     height: 70%;
@@ -20,11 +33,11 @@ body {
     position: relative;
     z-index: 5;
 }
-#time {
+.time {
     font-size: 300px;
     font-family: "Righteous", sans-serif;
     position: absolute;
-
+    pointer-events: none;
     z-index: 1;
     color: rgba(255, 255, 255, 0.2);
 }
@@ -35,6 +48,9 @@ body {
     line-height: 0;
     color: white;
     pointer-events: none;
+    font-family: "Limelight", sans-serif;
+
+    
 }
 .start {
     position: absolute;
@@ -65,8 +81,8 @@ body {
     filter: drop-shadow(0 0 10px red);
 }
 .hide {
-    transition: all 0.2s ease;
     opacity: 0;
     transform: scale(0);
     filter: drop-shadow(0 0 0 white);
 }
+
